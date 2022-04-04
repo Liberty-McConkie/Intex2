@@ -1,9 +1,6 @@
-﻿@*@page "/admin"
+﻿@page "/admin"
 
-@using Microsoft.AspNetCore.Authorization
-@attribute [Authorize]
-
-@model ATBooks.Pages.Admin.IndexModel
+@model Intex.Pages.Admin.IndexModel
 
 @{
 }
@@ -14,15 +11,16 @@
 
 <head>
     <title>ATBooks Admin</title>
-    <link href="~/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <base href="/" />
 </head>
 
 <body>
 
-    <component type="typeof(ATBooks.Pages.Admin.Routed)" render-mode="Server" />
-    <script src="/_framework/blazor.server.js"></script>
+    <h2>Break it down? That's hand-carved mahogany</h2>
+    @*<component type="typeof(Intex.Pages.Admin.Routed)" render-mode="Server" />
+    <script src="/_framework/blazor.server.js"></script>*@
 
 </body>
 
-</html>*@
+</html>

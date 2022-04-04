@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ATBooks.Pages.Admin
+namespace Intex.Pages.Admin
 {
     public class IndexModel : PageModel
     {
