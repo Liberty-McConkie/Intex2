@@ -11,27 +11,43 @@ namespace Intex.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        private ICrashRepository repo;
 
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult AccidentSummary()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        //public IActionResult AccidentSummary(string crashSeverity, int pageNum = 1)
+        //{
+        //    int pageSize = 5;
+
+        //    var x = new BooksViewModel
+        //    {
+        //        Books = repo.Books
+        //        .Where(b => b.Category == bookCategory || bookCategory == null)
+        //        .OrderBy(b => b.Title)
+        //        .Skip((pageNum - 1) * pageSize)
+        //        .Take(pageSize),
+
+        //        PageInfo = new PageInfo
+        //        {
+        //            TotalNumBooks =
+        //                (bookCategory == null
+        //                    ? repo.Crash.Count()
+        //                    : repo.Crash.Where(x => x.Category == bookCategory).Count()),
+        //            BooksPerPage = pageSize,
+        //            CurrentPage = pageNum
+        //        }
+        //    };
+
+        //    return View(x);
+        //}
+
     }
 }
